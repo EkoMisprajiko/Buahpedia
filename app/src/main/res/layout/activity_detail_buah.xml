@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailBuahActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/img_item_photo"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/img_item_photo"
+                    android:orientation="vertical"
+                    android:layout_marginTop="45dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    >
+                    <TextView
+                        style="@style/Biasa"
+                        android:id="@+id/tv_nama_buah_detail"
+                        android:text="Nama Buah"
+
+                        android:layout_marginBottom="8dp"/>
+                    <TextView
+                        style="@style/Latin"
+                        android:id="@+id/tv_nama_latin_detail"
+                        android:text="Nama Latin"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:text="Deskripsi Singkat:"
+            style="@style/Biasa"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:text="Deskripsi"
+            android:id="@+id/tv_deskripsi_detail"
+            style="@style/TextContent"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingMultiplier="1"
+            android:textColor="@color/black"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            >
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    style="@style/Textlain.field"
+
+                    android:text="Manfaat :"/>
+                <TextView
+                    style="@style/Textlain.value"
+                    android:id="@+id/tv_manfaat_detail"
+                    android:text="Konten Manfaat Buah" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <TextView
+                    style="@style/Textlain.field"
+                    android:text="Sumber  :"/>
+                <TextView
+                    style="@style/Textlain.value"
+                    android:id="@+id/tv_sumber_detail"
+                    android:text="Konten Sumber"/>
+
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+
+
+</FrameLayout>
